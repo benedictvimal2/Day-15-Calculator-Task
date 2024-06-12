@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             display.textContent = display.textContent.slice(0, -1) || '0';
         } else if (value === '=') {
             try {
-                display.textContent = eval(display.textContent.replace('×', '*').replace('÷', '/'));
+                display.textContent = eval(display.textContent.replace('×', '*').replace('÷', '/').replace('−', '-'));
             } catch {
                 display.textContent = 'Error';
             }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(event) {
         const key = event.key;
         if ((key >= '0' && key <= '9') || key === '.' || key === '/' || key === '*' || key === '-' || key === '+') {
-            handleButtonClick(key === '/' ? '÷' : key === '*' ? '×' : key);
+            handleButtonClick(key === '/' ? '÷' : key === '*' ? '×' : key === '-' ? '−' : key);
         } else if (key === 'Enter') {
             handleButtonClick('=');
         } else if (key === 'Backspace') {
