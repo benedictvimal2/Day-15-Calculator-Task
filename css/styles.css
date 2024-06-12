@@ -1,67 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 body {
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background :(
+      0deg,
+      rgb(149, 189, 202) 0px,
+      rgb(149, 189, 202) 2px,
+      transparent 2px,
+      transparent 120px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(149, 189, 202) 0px,
+      rgb(149, 189, 202) 1px,
+      transparent 1px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(149, 189, 202) 0px,
+      rgb(149, 189, 202) 2px,
+      transparent 2px,
+      transparent 120px
+    ),
+    linear-gradient(white, white);
+}
+h1,
+p {
+  font-family: "Libre Baskerville", serif !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  letter-spacing: 5px;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .calculator {
-    width: 320px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    background-color: #fff;
+  width: 450px;
+  height: 525px;
+  border: 3px solid rgb(154, 175, 209);
+  background-color: rgb(55, 71, 82);
+  border-radius: 10px;
+  box-shadow: rgba(76, 76, 133, 0.1) 0px 4px 16px,
+    rgba(110, 110, 241, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-
+.content {
+  height: 60vh;
+}
 .display {
-    width: 100%;
-    height: 80px;
-    background: #e0e0e0;
-    text-align: right;
-    padding: 20px;
-    font-size: 36px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    color: #333;
+  background-color: rgb(212, 218, 214);
+  border: 2px solid rgb(23, 32, 46);
+  height: 60px;
+  font-size: 30px;
+  padding: 15px;
 }
 
-.btn-group {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+#point,
+#multi,
+#divide,
+#add,
+#subtract,
+#backspace,
+#mod {
+  font-weight: bolder;
+  font-size: large;
+  color: rgb(238, 16, 16) !important;
+}
+.btn {
+  color: white !important;
 }
 
-.btn-group .btn {
-    height: 60px;
-    font-size: 24px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: #f7f7f7;
-    color: #333;
-    transition: background-color 0.3s;
+.btn:active {
+  background-color: hsla(230, 6%, 37%, 0.534) !important;
 }
 
-.btn-group .btn:active {
-    background-color: #ddd;
+#equal:active {
+  background-color: hsla(228, 15%, 94%, 0.534) !important;
 }
 
-.btn-group .btn:nth-child(4n) {
-    background-color: #ff4d4d;
-    color: white;
-}
-
-.btn-group .btn:nth-child(19) {
-    background-color: #0066cc;
-    color: white;
-}
-
-.btn-group .btn:hover {
-    background-color: #e0e0e0;
-}
-
-.btn-group .btn:nth-child(19):hover {
-    background-color: #005bb5;
+#equal {
+    background-color: grey;
+  letter-spacing: 5px;
+  border-radius: 25px;
 }
