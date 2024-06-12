@@ -1,18 +1,67 @@
- .calculator {
-    width: 300px;
-    margin: 100px auto;
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
 .display {
     width: 100%;
-    height: 50px;
-    background: #eee;
+    height: 80px;
+    background: #e0e0e0;
     text-align: right;
-    padding: 10px;
-    font-size: 24px;
-    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 36px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #333;
 }
-.btn {
-    width: 25%;
+
+.btn-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn-group .btn {
     height: 60px;
     font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.btn-group .btn:active {
+    background-color: #ddd;
+}
+
+.btn-group .btn:nth-child(4n) {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.btn-group .btn:nth-child(19) {
+    background-color: #0066cc;
+    color: white;
+}
+
+.btn-group .btn:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-group .btn:nth-child(19):hover {
+    background-color: #005bb5;
 }
